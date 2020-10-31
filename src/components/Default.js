@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Default(props) {
-  const { pathname } = props.location;
+export default function Default({ location }) {
+  const { pathname } = location;
   return (
     <div className="font-italic text-center">
       <h1 className="display-1">404</h1>

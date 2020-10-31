@@ -4,7 +4,7 @@ import CartLabels from "./CartLabels";
 import CartList from "./CartList";
 import CartTotals from "./CartTotals";
 
-export default function Cart() {
+export default function Cart({ history }) {
   return (
     <Consumer>
       {(value) => {
@@ -22,7 +22,7 @@ export default function Cart() {
                 return <CartList key={item.id} product={item} value={value} />;
               })}
               {/* cart totals */}
-              <CartTotals value={value} />
+              <CartTotals value={value} history={history} />
             </div>
           );
         }
